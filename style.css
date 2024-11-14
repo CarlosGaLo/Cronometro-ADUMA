@@ -1,0 +1,249 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Form Styles */
+form#add-timer-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.collapsible {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsed {
+  max-height: 0;
+}
+
+.collapsed form,
+.collapsed > * {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
+
+/* Timer Styles */
+.timer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60px; /* Espacio para el botón de eliminar */
+}
+
+/* Ajustes para el botón de iniciar/pausar */
+.timer-header .start-pause-button {
+  margin-left: 10px;
+}
+
+.timer-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-pause-button {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.timer-header input {
+  border: none;
+  background: transparent;
+  font-size: 1.2em;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.timer-header input:focus {
+  outline: none;
+}
+
+.timer-content {
+  padding: 15px;
+}
+
+.time-display {
+  text-align: center;
+}
+
+.start-pause-button {
+  display: block;
+  margin: 10px auto;
+}
+
+.toggle-content-button {
+  display: block;
+  margin: 10px auto;
+}
+
+.timer-content .time-display {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls button {
+  flex: 1 1 auto;
+}
+
+.checkbox-section {
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-group span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Negative Time Style */
+.negative {
+  color: red;
+}
+
+/* Collapsible Content within Timer */
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible-content.collapsed {
+  max-height: 0;
+}
+
+.collapsible-content.collapsed > * {
+  display: none;
+}
+
+/* Toggle Button within Timer */
+.toggle-content-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.toggle-content-button:focus {
+  outline: none;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: red;
+  border: none;
+  color: black;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+.delete-button::before {
+  content: "\1F5D1"; /* Unicode para el icono de papelera */
+  font-size: 1.2em;
+}
+
+/* Reset All Button */
+#reset-all {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+}
